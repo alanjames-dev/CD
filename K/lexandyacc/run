@@ -1,0 +1,16 @@
+sudo apt install flex
+sudo apt install byacc
+sudo apt install bison
+sudo apt install bison++
+sudo apt install byacc -j
+
+lex lexi.l
+gcc lex.yy.c
+./a.out
+
+yacc -d valid.y
+lex valid.l
+gcc lex.yy.c y.tab.c -w
+./a.out
+
+
